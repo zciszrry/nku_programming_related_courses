@@ -1,0 +1,50 @@
+在第一次作业中生成的数据库StudentInfor中完成下面的查询。
+
+
+例子：给出学号为“0122004002”的学生所修课程信息(StudentID,StudentName,CourseID，CourseName，IsRestudy，Score)
+
+select Student.StudentID,StudentName,Course.CourseID，CourseName，IsRestudy，Score   
+---注意：结果的列名必须采用题目中给出的列名
+from Student,StudentCourse,Lesson,LessonClass，Course
+where Student.StudentID='0122004002'
+	and Student.StudentID=StudentCourse.StudentID
+	and StudentCourse.LessonClassID=LessonClass.LessonClassID
+	and LessonClass.LessonID=Lesson.LessonID
+	and Lesson.CourseID=Course.CourseID
+
+
+1.给出当前所有“课程状态”为“1”即正在上课的课程的信息，查询结果包括(CourseID,CourseName,MaxStudentNumber，CourseType，CourseCredit)
+
+
+2.给出当前所有“课程状态”为“1”课程的分班数(CourseID,CourseName,ClassCount)
+
+
+3.哪个（或者哪些）课程开设的班级数目最多(历年总和)(CourseID,CourseName)？
+
+
+4.给出每个学生选过的课程的学分总数和学分绩
+(StudentID,TotalCredit，AvgScroe)
+
+
+5.给出每门课程的统计信息，包括总人数，及格人数，不及格人数(ClassID)？
+
+
+6.哪个（哪些）学生的不及格学分最多(StudentID,StudentName)？
+
+
+7.给出没有修过英语三级的学生(StudentID,StudentName)？
+
+
+8.给出比“李丽”年龄大的所有学生(StudentID,StudentName)？
+
+
+9.哪些课程当前没有开课(CourseID,CourseName)？
+
+
+10.找出所有2006年开设的课程
+(CourseID,CourseName,BeginDate)
+
+
+
+
+
